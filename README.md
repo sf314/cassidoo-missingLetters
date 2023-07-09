@@ -24,16 +24,16 @@ By using their ASCII codes, we can create a marker that starts at the first
 letter of the input:
 
 ```js
-let currentInt = input[0].charCodeAt(0);
+let marker = input[0].charCodeAt(0);
 ```
 
 We can then loop thru each letter of the input array, find that letter's ASCII
-value, and print (or save) each ASCII code between it and the marker.
+value, then print (or save) each ASCII code between it and the marker.
 
 ```js
-while (currentInt < ascii - 1) {
-    currentInt++;
-    missing.push(String.fromCharCode(currentInt))
+while (marker < ascii - 1) {
+    marker++;
+    missing.push(String.fromCharCode(marker))
 }
 ```
 
@@ -46,7 +46,7 @@ then this will push `98` and `99` to the output.
 After this inner loop completes, we can save marker to the current letter
 
 ```js
-currentInt = ascii
+marker = ascii
 ```
 
 Assumptions:
