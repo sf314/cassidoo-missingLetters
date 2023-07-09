@@ -23,12 +23,8 @@ function missingLetters(input) {
     // First item, all the way to the 2nd to last
     for (let index = 0; index < input.length; index++) {
         let ascii = input[index].charCodeAt(0);
-        // console.log("Ascii: " + ascii);
-        // console.log("Current int: " + currentInt);
 
         while (currentInt < ascii - 1) {
-            // console.log("  Compare: int " + currentInt + " vs ascii " + ascii)
-            // console.log("  Push " + currentInt)
             currentInt++;
             missing.push(String.fromCharCode(currentInt))
         }
